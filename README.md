@@ -16,7 +16,7 @@ From this directory:
 
 2. **Environment**
 
-   Copy `.env.example` to `.env.local`:
+   Create **`.env.local`** (not committed; gitignored) with:
 
    ```env
    NEXT_PUBLIC_GRAPHQL_URL=http://localhost:4000/graphql

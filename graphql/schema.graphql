@@ -1,0 +1,30 @@
+type Query {
+  characters(filter: CharacterFilterInput): [Character!]!
+}
+
+type Character {
+  id: ID!
+  image: String!
+  name: String!
+  status: CharacterStatus!
+  gender: CharacterGender!
+  description: String!
+}
+
+enum CharacterStatus {
+  ALIVE
+  DEAD
+  UNKNOWN
+}
+
+enum CharacterGender {
+  MALE
+  FEMALE
+  UNKNOWN
+}
+
+input CharacterFilterInput {
+  status: CharacterStatus
+  gender: CharacterGender
+  search: String
+}
